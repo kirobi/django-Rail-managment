@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <h1>Hello, {{ user }}</h1>
+    <h2>Here is the list of your Invoices:</h2>
+    <hr>
+    <table class="table">
+        <tr>
+            <td><h3>Train</h3></td>
+            <td><h3>From</h3></td>
+            <td><h3>To</h3></td>
+            <td><h3>Price</h3></td>
+            <td><h3>Date</h3></td>
+            <td><h3>Status</h3></td>
+        </tr>
+        {% for i in invoices %}
+            {% if i.train.date < now %}
+                 <tr class="overdue">
+                    <td>{{ i.train.name }}</td>
+                    <td>{{ i.train.cityFrom }}</td>
+                    <td>{{ i.train.cityTo }}</td>
+                    <td>{{ i.cost }}₴</td>
+                    <td>{{ i.train.date }}</td>
+                    <td>Paid!</td>
+                </tr>
+            {% elif i.paid %}
+                <tr class="paid">
+                    <td>{{ i.train.name }}</td>
+                    <td>{{ i.train.cityFrom }}</td>
+                    <td>{{ i.train.cityTo }}</td>
+                    <td>{{ i.cost }}₴</td>
+                    <td>{{ i.train.date }}</td>
+                    <td>Paid!</td>
+                </tr>
+            {% else %}
+                <tr class="pending">
+                    <td>{{ i.train.name }}</td>
+                    <td>{{ i.train.cityFrom }}</td>
+                    <td>{{ i.train.cityTo }}</td>
+                    <td>{{ i.cost }}₴</td>
+                    <td>{{ i.train.date }}</td>
+                    <td><a class="button" href="/pay_invoice/?inv={{ i.id }}">Pay</a></td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+
+{% endblock %}

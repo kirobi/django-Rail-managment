@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <title>Smart Destinations</title>
+</head>
+<body>
+    <img class="header-image" src="{% static 'images/logo-small.png' %}"/><br>
+    <div class="centered">
+        {% block content %}
+        {% endblock %}
+        <br><br>
+        <hr>
+        <span>How did I get here?</span>
+        <a href="/">Take me back</a><br>
+    </div>
+</body>
+</html>

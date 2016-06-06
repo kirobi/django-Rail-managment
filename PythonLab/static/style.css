@@ -1,0 +1,182 @@
+html {
+
+}
+
+body {
+    background-color: #eee;
+    color: #555;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+.table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 0px solid #cbcbcb;
+    width: 100%;
+    font-size: 20px;
+}
+
+h1 {
+    color: #C75C5C;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.header-image {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 240px;
+    margin-top: 50px;
+}
+
+.centered {
+    margin: auto;
+    margin-top: 3%;
+    width: 800px;
+    height: auto;
+}
+
+.centered ul.errorlist {
+    display: block;
+    margin: auto;
+    height: auto;
+    color: #C75C5C;
+    list-style: none;
+}
+
+.centered img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+.centered span {
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.centered span.helptext {
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.centered input[type="text"], .centered input[type="password"] {
+    margin: auto;
+    margin-top: 5px;
+    display: block;
+    color: #555;
+    height: 30px;
+    width: 60%;
+    left: 20%;
+    font-size: 20px;
+    padding: 7px;
+    border-width: 2px;
+    border-style: solid;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border-color: #C75C5C;
+}
+
+.centered input[type="date"] {
+    margin-top: 5px;
+    color: #555;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    padding: 4px;
+    border-width: 2px;
+    border-style: solid;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border-color: #C75C5C;
+    text-align: center;
+}
+
+.centered a {
+    color: #C75C5C;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.centered a.high {
+    font-size: 20px;
+}
+
+.centered a:hover {
+    color: #F5CF87;
+}
+
+.centered .button {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+    padding: 8px;
+    background-color: transparent;
+    border-width: 3px;
+    border-color: #555;
+    border-style: solid;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.centered td .button {
+    margin-top: 2px;
+    font-size: 18px;
+    color: #555;
+    padding: 5px;
+}
+
+.centered .button:hover {
+    background-color: #F5CF87;
+    border-color: #C75C5C;
+    cursor: pointer;
+}
+
+.centered .error-message {
+    font-style: normal;
+    font-size: 25px;
+    color: #C75C5C;
+    display: block;
+    text-align: center;
+}
+
+tr {
+    height: 50px;
+}
+
+tr.paid {
+    background-color: #d1ff95;
+}
+
+tr.pending {
+    background-color: #ffaeae;
+}
+
+tr.overdue {
+    background-color: #888;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <title>Smart Destinations</title>
+</head>
+<body>
+    <div class="centered">
+
+        <img src="{% static 'images/logo.png' %}"/><br><br>
+        <hr>
+        <form action="/trains/", method="get">
+            <span>Quick search for available tickets</span>
+            <span>FROM:</span>
+            <input name="cityFrom" type="text" placeholder="Starting point">
+            <span>TO:</span>
+            <input name="cityTo" type="text" placeholder="Final destination">
+            <span>Set out date:</span>
+            <center>
+                <input name="date" type="date"><br>
+                <input type="submit" value="SEARCH" class="button">
+            </center>
+        </form>
+        <br>
+        <span>OR</span><br>
+        <a class="high" href="/trains/">Just give me the list of trains</a>
+        <br><br>
+        <hr>
+
+        {% if user.is_authenticated %}
+        <span>Hello, {{ user }}</span>
+        <a class="high" href="/cabinet/">My cabinet</a><br>
+        <span>Not you?</span>
+        <a href="/logout/">Log out</a>
+
+        {% else %}
+        <span>Login to your personal cabinet</span>
+        <a class="high" href="/login/">Login</a><br>
+        <span>Have no account?</span>
+        <a href="/register/">Create it now</a>
+        {% endif %}
+
+    </div>
+</body>
+</html>
